@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>i hate rain</title>
+	<style type="text/css">
+		@font-face { font-family: 'ImcreSoojin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff'); font-weight: normal; font-style: normal; }
+		body{margin: auto; overflow-y: hidden;}
+		.wrap{position: relative; margin: auto; width: 1200px; background-color: gray;  font-family: 'ImcreSoojin';}
+
+		.rain{width: 4px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
+			animation: rr 1s infinite ease-in; }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 800px;} to{bottom: 0px;}}
+		img{position: absolute;}
+
+		.aa { width: 1000px; margin: auto; left: calc(50% - 500px); z-index: 990; margin-top: -50px;}
+		.ab { width: 1000px; z-index: 995; padding-top: 570px; left: calc(50% - 500px); }
+		.an{width: 50px; padding-top: 620px; left: calc(50% + 370px); z-index: 996;}
+		p{position: absolute; font-size: 1.5em; padding-top: 600px; left: calc(50% - 410px); z-index: 997; text-align: left; line-height: 1.6;  }
+
+		.an:hover{opacity: 0.5;}
+
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="rain" id="tt"></div>
+		
+		<p> 비싫이는 비와 욕설이 계속되는 이 상황이 정말 싫었습니다.  </p>
+		<a href="index6-1.html"><img src="./next.png" class="an"></a>
+		<img src="./bar.png" class="ab">
+		<img src="./f.png" class="aa">
+
+		
+	</div>
+
+	<script type="text/javascript">
+		for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*2 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+
+		
+		 
+	</script>
+</body>
+</html>

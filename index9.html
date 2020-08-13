@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>i hate rain</title>
+	<style type="text/css">
+		body::-webkit-scrollbar{display: none;}
+		.wrap{position: relative; padding: 0px; margin: 0px;}
+
+		.rain{width: 4px; height: 40px; position: fixed; background: #6f9dcc; z-index: 999;
+			animation: rr 1s infinite ease-in; }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 800px;} to{bottom: 0px;}}
+	
+
+
+		#monitor{position: fixed; background: black; padding:5px; top: 0px; right: 0px; color: white; width: 70px; z-index: 9999; font-size: 20px;}
+
+		.a{position: fixed; height: 250px; top:67%; left: calc(50% - 380px); z-index: 998;}
+		.a1{position: absolute; height: 725px; z-index: 990; left: -10px; top: -10px;}
+		.a2{position: absolute; z-index: 888; height: 725px; left: -10px; top: -10px;}
+		.a3{position: absolute; z-index: 991; width: 5000px; top: -50px; left: 400px;}
+
+	
+
+		.a4{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 250px); top: 370px; opacity: 0;}
+		.a5{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 650px); top: 370px; opacity: 0;}
+
+		.a6{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 850px); top: 350px; opacity:0;}
+		.a7{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 1150px); top: 220px; opacity:0;}
+		.a8{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 1200px); top: 520px; opacity:0;}
+
+
+		.aa1{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 1830px); top: 360px; opacity:0;}
+		.aa2{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 1950px); top: 180px; opacity:0;}
+		.aa3{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2040px); top: 280px; opacity:0;}
+
+		.aa4{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2150px); top: 440px; opacity:0;}
+		.aa5{position: absolute; z-index: 991; width: 70px; 
+			left: calc(50% + 2200px); top: 250px; opacity:0;}
+
+		.aa6{position: absolute; z-index: 991; width: 70px; 
+			left: calc(50% + 2320px); top: 180px; opacity:0;}
+		.aa7{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2280px); top: 330px; opacity:0;}
+		.aa8{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2520px); top: 180px; opacity:0;}
+		.aa9{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2520px); top: 330px; opacity:0;}
+
+		.aaa1{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 2800px); top: 550px; opacity:0;}
+		.aaa4{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 3450px); top: 260px; opacity:0;}
+
+		.aaa2{position: absolute; z-index: 991; width: 100px; 
+			left: calc(50% + 3750px); top: 360px; opacity:0;}
+		.aaa3{position: absolute; z-index: 991; width: 70px; 
+			left: calc(50% + 4420px); top: 450px; opacity:0;}			
+
+			@keyframes up{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+
+			
+	</style>
+</head>
+<body>
+	<div class="wrap">
+
+<div class="rain" id="tt"></div>
+
+		<img src="./i1.png" class="a2">
+		<img src="./i2.png" class="a1">
+		<img src="./i3.png" class="a3">
+
+		
+
+		<img src="./i4.png" class="a4" id="b1">
+		<img src="./ii2.png" class="a5" id="b2">
+		<img src="./ii3.png" class="a6" id="b3">
+		<img src="./ii4.png" class="a7" id="b4">
+		<img src="./ii5.png" class="a8" id="b5">
+
+		<img src="./iii1.png" class="aa1" id="bb1">
+		<img src="./iii2.png" class="aa2" id="bb2">
+		<img src="./iii3.png" class="aa3" id="bb3">
+
+		<img src="./iii4.png" class="aa4" id="bb4">
+		<img src="./iii5.png" class="aa5" id="bb5">
+
+		<img src="./iii6.png" class="aa6" id="bb6">
+		<img src="./iii7.png" class="aa7" id="bb7">
+		<img src="./iii8.png" class="aa8" id="bb8">
+		<img src="./iii9.png" class="aa9" id="bb9">
+
+		<img src="./iiii1.png" class="aaa1" id="bbb1">
+		<img src="./iiii2.png" class="aaa2" id="bbb2">
+		<img src="./iiii3.png" class="aaa3" id="bbb3">
+		<img src="./iiii4.png" class="aaa4" id="bbb4">
+
+
+
+		<img src="./i.gif" class="a" id="walk">
+		<div id="monitor"></div>
+		
+	</div>
+<script type="text/javascript">
+	window.onscroll = function(){
+		var t = document.documentElement.scrollLeft +
+		document.body.scrollLeft;
+		monitor.innerHTML = t.toFixed(1);
+
+		if(t > 330){b1.style.animation = "up 0.5s forwards";}
+		else{b1.style.animation = "";}
+		if(t > 620){b2.style.animation = "up 0.2s forwards";}
+		else{b2.style.animation = "";}
+		if(t > 900){b3.style.animation = "up 0.2s forwards";}
+		else{b3.style.animation = "";}
+
+		if(t > 900){b4.style.animation = "up 0.2s forwards";}
+		else{b4.style.animation = "";}
+		if(t > 1000){b5.style.animation = "up 0.2s forwards";}
+		else{b5.style.animation = "";}
+
+		if(t > 2000){bb1.style.animation = "up 0.2s forwards";}
+		else{bb1.style.animation = "";}
+		if(t > 2000){bb2.style.animation = "up 0.2s forwards";}
+		else{bb2.style.animation = "";}
+		if(t > 2000){bb3.style.animation = "up 0.2s forwards";}
+		else{bb3.style.animation = "";}
+
+		if(t > 2000){bb4.style.animation = "up 0.2s forwards";}
+		else{bb4.style.animation = "";}
+		if(t > 2000){bb5.style.animation = "up 0.2s forwards";}
+		else{bb5.style.animation = "";}
+		if(t > 2000){bb6.style.animation = "up 0.2s forwards";}
+		else{bb6.style.animation = "";}
+		if(t > 2000){bb7.style.animation = "up 0.2s forwards";}
+		else{bb7.style.animation = "";}
+		if(t > 2000){bb8.style.animation = "up 0.2s forwards";}
+		else{bb8.style.animation = "";}
+		if(t > 2000){bb9.style.animation = "up 0.2s forwards";}
+		else{bb9.style.animation = "";}
+
+		if(t > 2800){bbb1.style.animation = "up 0.2s forwards";}
+		else{bbb1.style.animation = "";}
+		if(t > 3300){bbb4.style.animation = "up 0.2s forwards";}
+		else{bbb4.style.animation = "";}
+
+		if(t > 3850){bbb2.style.animation = "up 0.2s forwards";}
+		else{bbb2.style.animation = "";}
+		if(t > 3850){bbb3.style.animation = "up 0.2s forwards";}
+		else{bbb3.style.animation = "";}
+
+	
+
+
+	}
+
+	for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+
+	window.onkeydown = function(){
+		if (event.keyCode == 37){
+			walk.src = "i.gif";
+			walk.style.transform = "rotateY(180deg)";
+		}
+		else if (event.keyCode == 39){
+			walk.src = "i.gif";
+			walk.style.transform = "rotateY(0deg)";
+		}
+
+	}
+</script>
+</body>
+</html>
